@@ -42,4 +42,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(Goal::class);
     }
+
+    public function sales()
+    {
+        return $this->hasMany(Sale::class);
+    }
 }

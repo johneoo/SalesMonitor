@@ -19,6 +19,5 @@ Auth::routes();
 
 Route::resource('products', 'ProductController');
 Route::resource('goals', 'GoalController');
-
 Route::get('/home', 'HomeController@index')->name('home');
 
