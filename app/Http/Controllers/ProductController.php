@@ -77,7 +77,12 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
-        //
+        $data = $request->validate([
+            'product_name' => 'required|between:5,100',
+            'min_price' => 'required|digits_between:4,11|numeric',
+        ]);
+        $product->update($data);
+        return redirect('products')->with('message', 'New Changes Updated!');
     }
 
     /**

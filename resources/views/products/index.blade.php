@@ -32,7 +32,7 @@
                           <tbody>
                             @foreach ($products as $product)
                                 <tr>
-                                  <th scope="row">1</th>
+                                  <th scope="row">{{$product->id}}</th>
                                   <td>{{ $product->product_name }}</td>
                                   <td>&#x20a6;{{ number_format($product->min_price, 2, ".", ",") }}</td>
                                   <td>
